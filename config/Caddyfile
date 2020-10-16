@@ -1,15 +1,16 @@
+## These don't work:
 # example.com:443
 # https://example.com:443
 # https://example.com
-:443, example.com
-# tls me@example.com
+##
+:443, example.com # CHANGEME
 route {
   forward_proxy {
-    basic_auth alice abcabc
+    basic_auth username password # CHANGEME
     hide_ip
     hide_via
     probe_resistance secret.com
   }
   # file_server { root {env.HOME}/Downloads }
-  respond "pained gold spots accumulated"
+  respond "A drunk man will find his way home, but a drunk bird may get lost forever."
 }
