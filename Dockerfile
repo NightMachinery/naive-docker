@@ -12,4 +12,4 @@ RUN git clone https://github.com/klzgrad/forwardproxy && \
 FROM alpine
 
 COPY --from=builder /app/caddy /usr/bin/caddy
-CMD /usr/bin/caddy run -config /etc/naiveproxy/caddy.json
+CMD /usr/bin/caddy run -config  /etc/naiveproxy/Caddyfile # /etc/naiveproxy/caddy.json

@@ -1,0 +1,15 @@
+# example.com:443
+# https://example.com:443
+# https://example.com
+:443, example.com
+# tls me@example.com
+route {
+  forward_proxy {
+    basic_auth alice abcabc
+    hide_ip
+    hide_via
+    probe_resistance secret.com
+  }
+  # file_server { root {env.HOME}/Downloads }
+  respond "pained gold spots accumulated"
+}
